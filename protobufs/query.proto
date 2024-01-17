@@ -3,6 +3,7 @@ syntax = "proto3";
 package query;
 
 option go_package = "pb/query";
+// option python_package = "pb.query";
 
 message ResponseBody {
   string message = 1;

@@ -8,3 +8,8 @@ grpc_go:
 	@protoc --proto_path=protobufs protobufs/*.proto --go_out=server --go-grpc_out=server
 	@echo "Finished generating go grpc code"
 
+generate: grpc_python grpc_go
+
+nix-shell:
+	@echo "Entering nix-shell"
+	@nix-shell ./shell.nix --run fish

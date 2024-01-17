@@ -9,6 +9,7 @@ mkShell rec {
     git
     go
     golangci-lint
-    protoc
+    protobuf3_20
+	fish
   ];
 }

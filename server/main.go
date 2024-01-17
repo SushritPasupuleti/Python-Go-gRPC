@@ -5,6 +5,7 @@ import (
 
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 
 	pb "server/pb/query"
 )
@@ -12,7 +13,7 @@ import (
 func main() {
 
 	var conn *grpc.ClientConn
-	conn, err := grpc.Dial(":50051", grpc.WithInsecure())
+	conn, err := grpc.Dial(":50051", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatalf("did not connect: %s", err)
 	}
