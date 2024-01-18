@@ -3,6 +3,7 @@ module server
 go 1.21.4
 
 require (
+	github.com/go-chi/chi/v5 v5.0.11 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	golang.org/x/net v0.20.0 // indirect
 	golang.org/x/sys v0.16.0 // indirect
